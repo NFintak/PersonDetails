@@ -15,15 +15,17 @@ public class PersonHandler {
     
     public String whileLoop() {
         String result = "";
-        // create a `counter`
-        // while `counter` is less than length of array
+        int i = 0;// create a `counter`
+        StringBuilder stringBuilder = new StringBuilder();
+        while (i < personArray.length) {// while `counter` is less than length of array
             // begin loop
-
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-
-            // end loop
+            Person currentPerson = this.personArray[i];// use `counter` to identify the `current Person` in the array
+            String personFirstName = currentPerson.getFirstName();
+            String personLastName = currentPerson.getLastName(); // get `string Representation` of `currentPerson`
+            result = stringBuilder.append("\nMy first name is " + personFirstName)
+                    .append("\nMy last name is " + personLastName).toString(); //"\nMy first name is " + personFirstName + "\nMy last name is " + personLastName; // append `stringRepresentation` to `result` variable
+            i++;
+        }// end loop
         return result;
     }
 
@@ -34,14 +36,16 @@ public class PersonHandler {
         // identify initial value
         // identify terminal condition
         // identify increment
-
         // use the above clauses to declare for-loop signature
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < personArray.length; i++) {
             // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            Person currentPerson = this.personArray[i];// use `counter` to identify the `current Person` in the array
+            String personFirstName = currentPerson.getFirstName();
+            String personLastName = currentPerson.getLastName();// get `string Representation` of `currentPerson`
+            result = "\nMy first name is " + personFirstName + "\nMy last name is " + personLastName;// append `stringRepresentation` to `result` variable
             // end loop
-
+        }
         return result;
     }
 
