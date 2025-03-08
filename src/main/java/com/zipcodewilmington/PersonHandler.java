@@ -43,7 +43,8 @@ public class PersonHandler {
             Person currentPerson = this.personArray[i];// use `counter` to identify the `current Person` in the array
             String personFirstName = currentPerson.getFirstName();
             String personLastName = currentPerson.getLastName();// get `string Representation` of `currentPerson`
-            result = "\nMy first name is " + personFirstName + "\nMy last name is " + personLastName;// append `stringRepresentation` to `result` variable
+            result = stringBuilder.append("\nMy first name is " + personFirstName)
+                    .append("\nMy last name is " + personLastName).toString();// append `stringRepresentation` to `result` variable
             // end loop
         }
         return result;
