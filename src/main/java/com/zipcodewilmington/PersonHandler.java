@@ -54,15 +54,18 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
+        StringBuilder stringBuilder = new StringBuilder();
         // identify array's type
         // identify array's variable-name
-
-        // use the above discoveries to declare for-each-loop signature
+        for (Person currentPerson : this.personArray) {
+            // use the above discoveries to declare for-each-loop signature
             // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            String personFirstName = currentPerson.getFirstName();
+            String personLastName = currentPerson.getLastName();// get `string Representation` of `currentPerson`
+            result = stringBuilder.append("\nMy first name is " + personFirstName)
+                    .append("\nMy last name is " + personLastName).toString();// append `stringRepresentation` to `result` variable
             // end loop
-
+        }
         return result;
     }
 
